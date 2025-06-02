@@ -10,7 +10,7 @@ export class AlarmCreatedEventHandler implements IEventHandler<SerializedEventPa
         private readonly upsertMatrializedAlarmRepository: UpsertMaterializedAlarmRepository
     ) {}
     
-    private readonly logger = new Logger(AlarmCreatedEvent.name);
+    private readonly logger = new Logger(AlarmCreatedEventHandler.name);
 
 
 
