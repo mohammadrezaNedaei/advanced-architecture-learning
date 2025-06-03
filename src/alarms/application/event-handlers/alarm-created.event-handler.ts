@@ -20,7 +20,7 @@ export class AlarmCreatedEventHandler implements IEventHandler<SerializedEventPa
         await this.upsertMatrializedAlarmRepository.upsert({
             id: event.alarm.id,
             name: event.alarm.name,
-            severity: event.alarm.severity.value,
+            severity: event.alarm.severity,
             triggeredAt: new Date(event.alarm.triggeredAt),
             isAcknowledged: event.alarm.isAcknowledged,
             items: event.alarm.items,

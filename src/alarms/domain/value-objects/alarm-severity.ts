@@ -6,4 +6,8 @@ export class AlarmSeverity {
     equals(severity: AlarmSeverity) {
         return this.value === severity.value;
     }
+
+    toJSON() {
+        return this.value;
+    }
 }
