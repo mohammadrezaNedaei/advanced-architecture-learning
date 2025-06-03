@@ -18,9 +18,7 @@ export class AcknowledgeAlarmCommandHandler implements ICommandHandler<Acknowled
             command.alarmId,
             Alarm,
         );
-        console.log('after rehydrate')
         alarm.acknowledge();
-        console.log('after ecknowledge', alarm)
         alarm.commit();
         return alarm;
     }
